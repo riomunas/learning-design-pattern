@@ -1,7 +1,7 @@
-package org.abuaisyah.crational.singleton.non_thraed_safe;
+package org.abuaisyah.creational.singleton.thraed_safe;
 
 public class Singleton {
-    private static Singleton instance;
+    private static volatile Singleton instance;
     public String value;
 
     private Singleton(String value) {
@@ -15,10 +15,16 @@ public class Singleton {
     }
 
     public static Singleton getInstance(String value) {
-        if (instance == null) {
-            instance = new Singleton(value);
+        Singleton result = instance;
+        if (result != null) {
+            return result;
         }
-        return instance;
+        synchronized (Singleton.class) {
+            if (instance == null) {
+                instance = new Singleton(value);
+            }
+            return instance;
+        }
     }
 
     @Override

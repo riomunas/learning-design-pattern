@@ -1,6 +1,4 @@
-package org.abuaisyah.crational.singleton.thraed_safe;
-
-import org.abuaisyah.crational.singleton.thraed_safe.Singleton;
+package org.abuaisyah.creational.singleton.thraed_safe;
 
 public class SingletonTest {
     public static void main(String[] args) {
@@ -10,10 +8,10 @@ public class SingletonTest {
         RESULT:
         """);
 //        new Thread(() -> {
-//            System.out.println(Singleton.getInstance("FOO", 5000).toString());
+//            System.out.println(Singleton.getInstance("FOO").toString());
 //        }).start();
 //        new Thread(() -> {
-//            System.out.println(Singleton.getInstance("BAR", 500).toString());
+//            System.out.println(Singleton.getInstance("BAR").toString());
 //        }).start();
 
         new Thread(() -> {

@@ -1,4 +1,4 @@
-package org.abuaisyah.crational.singleton.non_thraed_safe;
+package org.abuaisyah.creational.singleton.non_thraed_safe;
 
 public class SingletonTest {
     public static void main(String[] args) {
