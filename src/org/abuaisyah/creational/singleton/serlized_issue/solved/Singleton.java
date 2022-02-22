@@ -1,6 +1,8 @@
-package org.abuaisyah.creational.singleton.thraed_safe;
+package org.abuaisyah.creational.singleton.serlized_issue.solved;
+import java.io.Serializable;
 
-public class Singleton {
+public class Singleton implements Serializable {
+    private static final long serialVersionUID = 1L;
     private static volatile Singleton instance;
     public String value;
 
@@ -14,6 +16,9 @@ public class Singleton {
         }
     }
 
+    public static Singleton getInstance() {
+        return getInstance(null);
+    }
     public static Singleton getInstance(String value) {
         Singleton result = instance;
         if (result != null) {
@@ -25,6 +30,18 @@ public class Singleton {
             }
             return instance;
         }
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    protected Object readResolve() {
+        return instance;
     }
 
     @Override

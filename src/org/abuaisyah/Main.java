@@ -1,6 +1,6 @@
 package org.abuaisyah;
 
-import org.abuaisyah.creational.singleton.non_thraed_safe.Singleton;
+import org.abuaisyah.creational.singleton.thread_issue.problem.Singleton;
 
 public class Main {
 

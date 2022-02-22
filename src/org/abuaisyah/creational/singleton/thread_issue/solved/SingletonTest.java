@@ -1,4 +1,4 @@
-package org.abuaisyah.creational.singleton.thraed_safe;
+package org.abuaisyah.creational.singleton.thread_issue.solved;
 
 public class SingletonTest {
     public static void main(String[] args) {
