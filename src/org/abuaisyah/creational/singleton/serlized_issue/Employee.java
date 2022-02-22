@@ -9,16 +9,16 @@ public class Employee implements Serializable {
     public String name;
 
     public static void main(String[] args) {
-//        try {
-//            var instanceOne = new Employee();
-//            instanceOne.name = "rio";
-//            ObjectOutput out = new ObjectOutputStream(new FileOutputStream("fileemployee.ser"));
-//            out.writeObject(instanceOne);
-//            System.out.println(instanceOne.name);
-//            out.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            var instanceOne = new Employee();
+            instanceOne.name = "rio";
+            ObjectOutput out = new ObjectOutputStream(new FileOutputStream("fileemployee.ser"));
+            out.writeObject(instanceOne);
+            System.out.println(instanceOne.name);
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         try {
             ObjectInput in = new ObjectInputStream(new FileInputStream("fileemployee.ser"));

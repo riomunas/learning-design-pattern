@@ -1,4 +1,4 @@
-package org.abuaisyah.creational.singleton.serlized_issue.solved;
+package org.abuaisyah.creational.singleton;
 import java.io.Serializable;
 
 public class Singleton implements Serializable {
