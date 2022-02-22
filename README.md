@@ -11,6 +11,25 @@ https://howtodoinjava.com/design-patterns/
   - **Prototype** : is a creational design pattern that lets you copy existing objects without making your code dependent on their classes.
   - **Factory**
   - **Abstrac Factory**
+  - **Builder**
   
 - **Structural** :
+  - **Adapter**
+  - **Bridge**
+  - **Composite**
+  - **Decorator**
+  - **Facade**
+  - **Flyweight**
+  - **Proxy**
+
 - **Behavioral** :
+  - **Chain Of Responsibility**
+  - **Command**
+  - **Iterator**
+  - **Mediator**
+  - **Memento**
+  - **Observer**
+  - **State**
+  - **Strategy**
+  - **Template Method**
+  - **Visitor**
