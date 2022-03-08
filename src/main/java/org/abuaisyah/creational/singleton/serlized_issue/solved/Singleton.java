@@ -1,10 +1,8 @@
-package org.abuaisyah.creational.singleton;
+package org.abuaisyah.creational.singleton.serlized_issue.solved;
 import java.io.Serializable;
 
 public class Singleton implements Serializable {
-    //this for resolve deseriliaze issue when the class structure is modified
     private static final long serialVersionUID = 1L;
-    //volatile is to make sure this field is readable to any thread that use shared resource
     private static volatile Singleton instance;
     public String value;
 
@@ -19,13 +17,10 @@ public class Singleton implements Serializable {
     }
 
     public static Singleton getInstance(String value) {
-        //speedup process if the instance is not null
         Singleton result = instance;
-        //double checked for locking implementation
         if (result != null) {
             return result;
         }
-        //synchronized make sure only one thread on one time that can access this proceess
         synchronized (Singleton.class) {
             if (instance == null) {
                 instance = new Singleton(value);
@@ -42,8 +37,8 @@ public class Singleton implements Serializable {
         this.value = value;
     }
 
-    //resolve serializable issue
     protected Object readResolve() {
+        System.out.println("~~> this : "+ this +" "+this.value);
         return instance;
     }
 
